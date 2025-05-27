@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Other Page with Floating Login | Golden Acres</title>
+  <link rel="icon" href="icon.png">
+  <link rel="stylesheet" href="C:\Users\Karthik Raj\Desktop\real estate project\frontend\css\inputbox.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/headerfooter.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    
+  />
+
+  <style>
+    /* ===== Base & Reset ===== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: #f5f5f5;
+      color: #091e42;
+      line-height: 1.5;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    ul {
+      list-style: none;
+    }
+
+    
+
+    /* ===== Page Content ===== */
+    .page-content {
+      padding: 4rem 2rem;
+      /* Adjust padding as needed */
+    }
+    .page-content .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+    .page-content h1 {
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #005ca8;
+    }
+    .page-content p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    /* ===== Overlay ===== */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1400;
+    }
+
+    /* ===== Floating Login Form ===== */
+    .form-wrapper {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1500;
+    }
+    .auth-card {
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      max-width: 420px;
+      width: 100%;
+      padding: 2rem;
+    }
+    .auth-card h1 {
+      font-size: 1.75rem;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+    .input-field {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    .btn-primary {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      background: #0078d7;
+      border: none;
+      border-radius: 6px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+    .btn-primary:hover {
+      background: #005bb5;
+    }
+    .auth-card p {
+      margin-top: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+    .auth-card p a {
+      color: #0078d7;
+      font-weight: 600;
+    }
+    .error-message {
+      margin-top: 0.5rem;
+      color: #c41f1f;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    
+  </style>
+  <script src="js/auth.js" defer></script>
+</head>
+<body>
+
+  <!-- ===== Overlay for Modal ===== -->
+  <div class="overlay"></div>
+
+  <!-- ===== Floating Login Form ===== -->
+  <div class="form-wrapper">
+    <form id="login-form" class="auth-card">
+      <h1>Register</h1>
+      <div class="input-container">
+        <input type="text" id="name" placeholder=" " required>
+        <label for="username">Name</label>
+    </div>
+    <div class="input-container">
+        <input type="text" id="email" placeholder=" " required>
+        <label for="username">Email</label>
+    </div>
+    <div class="input-container">
+        <input type="password" id="password" name="password" placeholder=" " required>
+        <label for="password">Password</label>
+        <button type="button" id="togglePassword"></button>
+    </div>
+    <div class="input-container">
+        <input type="password" id="password" name="confirmPassword" placeholder=" " required>
+        <label for="password">Password</label>
+        <button type="button" id="togglePassword"></button>
+    </div>
+      <!--<input type="name" id="name" name="email" placeholder="Enter your name" class="input-field" required />
+      <input type="email" id="email" name="email" placeholder="Enter your email" class="input-field" required />
+      <input type="password" id="password" name="password" placeholder="Create a password" class="input-field" required />
+      <input type="password" id="password" name="confirmPassword" placeholder="Confirm your password" class="input-field" required />-->
+      <button type="submit" class="btn-primary" action="backend/rigester.php" >Register Now</button>
+      <p>Already have an account? <a href="login.html">Login</a></p>
+      <div id="error-message" class="error-message" style="display:none;"></div>
+    </form>
+  </div>
+
+  
+
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+    <script src="C:\Users\Karthik Raj\Desktop\real estate project\frontend\js\inputbox.js" defer></script>
+
+</body>
+</html>
