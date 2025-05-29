@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Contact Us | Golden Acres</title>
+
+   <!-- Font Awesome CDN -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+   <!-- Custom CSS File Link -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/headerfooter.css" />
+
+   <style>
+      /* ===== Base & Reset ===== */
+      *, *::before, *::after {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+      }
+      body {
+         font-family: 'Open Sans', sans-serif;
+         background: #f5f5f5;
+         color: #091e42;
+         line-height: 1.5;
+      }
+      a {
+         text-decoration: none;
+         color: inherit;
+      }
+      ul {
+         list-style: none;
+      }
+      
+     
+      /* ===== Contact Section Styles ===== */
+      .contact {
+         padding: 2rem;
+      }
+      .contact .row {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         justify-content: center;
+         gap: 2rem;
+      }
+      .contact .image img {
+         max-width: 100%;
+         height: auto;
+      }
+      .contact form {
+         max-width: 500px;
+         width: 100%;
+         background: #ffffff;
+         padding: 2rem;
+         border-radius: 8px;
+         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+      .contact form h3 {
+         text-align: center;
+         margin-bottom: 1.5rem;
+         font-size: 1.75rem;
+      }
+      .contact form .box {
+         width: 100%;
+         padding: 0.9rem;
+         margin: 0.5rem 0 1rem;
+         border: 1px solid #ccc;
+         border-radius: 6px;
+         font-size: 1rem;
+      }
+      .contact form .btn {
+         display: block;
+         width: 100%;
+         background: #0078d7;
+         color: #fff;
+         border: none;
+         padding: 0.9rem;
+         border-radius: 6px;
+         font-size: 1rem;
+         cursor: pointer;
+         transition: background 0.3s ease;
+      }
+      .contact form .btn:hover {
+         background: #005bb5;
+      }
+      
+      /* ===== FAQ Section Styles ===== */
+      .faq {
+         padding: 2rem;
+         background: #fff;
+         margin-top: 2rem;
+      }
+      .faq .heading {
+         text-align: center;
+         font-size: 2rem;
+         margin-bottom: 2rem;
+         color: #005ca8;
+      }
+      .faq .box-container {
+         display: grid;
+         gap: 1rem;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      }
+      .faq .box {
+         background: #f9f9f9;
+         padding: 1rem;
+         border-radius: 6px;
+         box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      }
+      .faq .box h3 {
+         font-size: 1.2rem;
+         margin-bottom: 0.75rem;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      .faq .box p {
+         font-size: 0.95rem;
+         color: #444;
+      }
+      
+      
+   </style>
+</head>
+<body>
+   <!-- ===== Header (Same as Login Page) ===== -->
+   <header class="header">
+      <div class="container">
+         <a href="login.html" class="logo"><i class="fas fa-house"></i> Golden Acres</a>
+         <input type="checkbox" id="menu-toggle">
+         <label for="menu-toggle" class="mobile-icon"><i class="fas fa-bars"></i></label>
+         <nav>
+            <ul>
+               <li><a href="index.html">Buy</a></li>
+               <li><a href="add-land.html">Sell</a></li>
+               <li><a href="#">Help <i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="about.html">About Us</a></li>
+                     <li><a href="contact.html">Contact Us</a></li>
+                     <li><a href="contact.html#faq">FAQ</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">Account <i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="login.html">Login</a></li>
+                     <li><a href="register.html">Register</a></li>
+                     <li><a href="profile.php">Profile</a></li>
+                  </ul>
+               </li>
+            </ul>
+         </nav>
+      </div>
+   </header>
+
+   <!-- ===== Contact Section ===== -->
+   <section class="contact">
+      <div class="row">
+         <div class="image">
+            <img src="images/contact-img.svg" alt="">
+         </div>
+         <form action="" method="post">
+            <h3>get in touch</h3>
+            <input type="text" name="name" required maxlength="50" placeholder="enter your name" class="box">
+            <input type="email" name="email" required maxlength="50" placeholder="enter your email" class="box">
+            <input type="number" name="number" required maxlength="10" max="9999999999" min="0" placeholder="enter your number" class="box">
+            <textarea name="message" placeholder="enter your message" required maxlength="1000" cols="30" rows="10" class="box"></textarea>
+            <input type="submit" value="send message" name="send" class="btn">
+         </form>
+      </div>
+   </section>
+
+   <!-- ===== FAQ Section ===== -->
+   <section class="faq" id="faq">
+      <h1 class="heading">FAQ</h1>
+      <div class="box-container">
+         <div class="box active">
+            <h3><span>how to cancel booking?</span><i class="fas fa-angle-down"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis ducimus aut accusantium sunt error esse laborum cumque ipsum ab.</p>
+         </div>
+         <div class="box active">
+            <h3><span>when will I get the possession?</span><i class="fas fa-angle-down"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis ducimus aut accusantium sunt error esse laborum cumque ipsum ab.</p>
+         </div>
+         <div class="box">
+            <h3><span>where can I pay the rent?</span><i class="fas fa-angle-down"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis ducimus aut accusantium sunt error esse laborum cumque ipsum ab.</p>
+         </div>
+         <div class="box">
+            <h3><span>how to contact with the buyers?</span><i class="fas fa-angle-down"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis ducimus aut accusantium sunt error esse laborum cumque ipsum ab.</p>
+         </div>
+         <div class="box">
+            <h3><span>why my listing not showing up?</span><i class="fas fa-angle-down"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis ducimus aut accusantium sunt error esse laborum cumque ipsum ab.</p>
+         </div>
+         <div class="box">
+            <h3><span>how to promote my listing?</span><i class="fas fa-angle-down"></i></h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus veritatis ducimus aut accusantium sunt error esse laborum cumque ipsum ab.</p>
+         </div>
+      </div>
+   </section>
+
+   <!-- ===== Footer (Same as Login Page) ===== -->
+   <footer class="footer">
+      <div class="container">
+         <div class="box">
+            <a href="tel:8050027829"><i class="fas fa-phone"></i> 8050027829</a>
+            <a href="mailto:goldenacres@gmail.com"><i class="fas fa-envelope"></i> goldenacres@gmail.com</a>
+            <a href="#"><i class="fas fa-map-marker-alt"></i> Udupi, Karnataka, India</a>
+         </div>
+         <div class="box">
+            <a href="index.html">Home</a>
+            <a href="listings.html">Listings</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+         </div>
+         <div class="box">
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://x.com/X."><i class="fab fa-twitter"></i> Twitter</a>
+        <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i> Instagram</a>
+      </div>
+      </div>
+      <div class="credit">© 2025 Golden Acres | All rights reserved.</div>
+   </footer>
+   
+   <script src="js/script.js"></script>
+</body>
+</html>
